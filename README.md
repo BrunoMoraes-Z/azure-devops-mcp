@@ -23,7 +23,7 @@ npm run build
 claude mcp add azure-devops \
   -e AZURE_DEVOPS_ORG_URL=https://dev.azure.com/my-org \
   -e AZURE_DEVOPS_PAT=<your-pat> \
-  -- npx BrunoMoraes-Z/azure-devops-mcp
+  -- npx -y BrunoMoraes-Z/azure-devops-mcp
 ```
 
 Or in any MCP client (JSON config):
@@ -33,7 +33,7 @@ Or in any MCP client (JSON config):
   "mcpServers": {
     "azure-devops": {
       "command": "npx",
-      "args": ["BrunoMoraes-Z/azure-devops-mcp"],
+      "args": ["-y", "BrunoMoraes-Z/azure-devops-mcp"],
       "env": {
         "AZURE_DEVOPS_ORG_URL": "https://dev.azure.com/my-org",
         "AZURE_DEVOPS_PAT": "<your-pat>"
@@ -43,7 +43,7 @@ Or in any MCP client (JSON config):
 }
 ```
 
-`npx --yes <path>` builds and runs the package's `bin` entry (`azure-devops-mcp`) straight from the local directory, so there's no need to run `npm run build` manually or reference `dist/index.js` directly. If you publish this package to the npm registry under its own name, you can instead run `npx --yes azure-devops-mcp` from anywhere.
+`npx --yes <path>` builds and runs the package's `bin` entry (`azure-devops-mcp`) straight from the local directory, so there's no need to run `npm run build` manually or reference `dist/index.js` directly. If you publish this package to the npm registry under its own name, you can instead run `npx -y BrunoMoraes-Z/azure-devops-mcp` from anywhere.
 
 ## Tools
 
